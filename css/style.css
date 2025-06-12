@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.main {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to bottom, #a80000, #3e0000);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 30px;
+  width: 490px;
+  border: 4px solid #fff;
+}
+
+.box-img {
+  border-radius: 30px 30px 0 0;
+  background-color: rgb(0, 28, 28);
+}
+
+.box-img img {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px 30px 0 0;
+}
+
+.box-btn {
+  background-color: #272424;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 20px 20px 0 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.box-date {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 1px;
+  font-family: "Montserrat", sans-serif;
+}
+.box-desc {
+  padding: 5px 12px;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.box-form {
+  padding: 12px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-item label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-item input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-item select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form-btn {
+  padding: 15px 20px;
+  width: 100%;
+  border-radius: 15px;
+  border: none;
+  font-weight: bold;
+  background-color: #a80000;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.f-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.f-tel {
+  font-size: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bolder;
+}
+.f-btn {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  background-color: #a80000;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.f-img {
+  width: 30px;
+}
+
+.f-desc {
+  font-size: 16px;
+}
+
+.f-bottom {
+  font-size: 12px;
+  color: #a5a5a5;
+}
+
+@media screen and (max-width: 550px) {
+  .box {
+    width: 95%;
+  }
+  .main {
+    min-height: auto;
+    padding: 10px 0;
+  }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To‘lov sahifasi</title>
+    <link rel="stylesheet" href="./css/pay.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <div class="top">
+        <div class="top-data">
+          <div class="data-name" id="name"></div>
+          <div class="data-phone" id="phone"></div>
+        </div>
+        <img src="./assets/ava.avif" alt="" class="top-img" />
+      </div>
+
+      <div class="header">
+        <div class="header-title">Supermiya Biznes</div>
+        <div class="header-type">Tarif: <span id="type"></span></div>
+        <div class="header-price">130,000,000 so'm</div>
+        <div class="header-bottom">
+          <div class="h-desc">
+            <div>To'lov qilish havolasi</div>
+            <div>muddati tugashiga qoldi:</div>
+          </div>
+          <div class="h-timer" id="timer">15:00</div>
+        </div>
+      </div>
+
+      <div class="pay">
+        <p class="pay-item">
+          1. Quyidagi to'lov turlaridan biri orqali to`lovni amalga oshiring:
+        </p>
+        <a
+          href="https://my.click.uz/services/pay?service_id=38620&merchant_id=25262"
+          target="_blank"
+          class="pay-click"
+        >
+          <img src="./assets/click.webp" class="click-img" alt="" />
+          <div class="click-p">To'lovga o'tish</div>
+        </a>
+        <p class="pay-item">
+          2. To'lovingiz muvaffaqiyatli amalga oshganini tasdiqlovchi rasmni
+          saqlab oling (screenshot).
+        </p>
+        <p class="pay-item">3. To'lovingiz rasmini yuklang</p>
+
+        <form class="pay-form" onsubmit="return submitForm(event)">
+          <div class="form-top">
+            <label class="form-radio" for="full">
+              <input
+                type="radio"
+                name="payment"
+                id="full"
+                value="To‘liq to‘ladim"
+                required
+              />
+              <div>To'liq to'ladim</div>
+            </label>
+            <label class="form-radio" for="little">
+              <input
+                type="radio"
+                name="payment"
+                id="little"
+                value="Joy band qildim"
+                required
+              />
+              <div>Joy band qildim</div>
+            </label>
+          </div>
+
+          <!-- Fayl yuklash -->
+          <input class="form-file" type="file" name="file" required />
+
+          <!-- Yashirin ma'lumotlar -->
+          <input type="hidden" name="formid" value="1093830376" />
+          <input type="hidden" name="name" value="Jasurbek" />
+          <input type="hidden" name="phone" value="124" />
+          <input type="hidden" name="type" value="VIP" />
+
+          <button class="form-btn" type="submit">Davom etish</button>
+        </form>
+      </div>
+
+      <div class="help">
+        <div class="help-title">
+          <div>Yordam kerakmi?</div>
+          <div>Yordamchimiz bilan bog'laning</div>
+        </div>
+        <a href="https://t.me/aipplyacademy" class="help-btn" target="_blank">
+          <img class="help-img" src="./assets/telegram.png" alt="" />
+          <span>Yordamchi bilan bog'lanish</span>
+        </a>
+      </div>
+
+      <div class="copyright">
+        © “Aipply Academy”, 2025 - Barcha huquqlar himoyalangan.
+      </div>
+    </div>
+
+    <script src="./js/pay.js"></script>
+  </body>
+</html>
