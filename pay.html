@@ -23,9 +23,9 @@
       </div>
 
       <div class="header">
-        <div class="header-title">Supermiya Biznes</div>
+        <div class="header-title">Kompyuter savodxonligi</div>
         <div class="header-type">Tarif: <span id="type"></span></div>
-        <div class="header-price">130,000,000 so'm</div>
+        <div class="header-price" id="price"></div>
         <div class="header-bottom">
           <div class="h-desc">
             <div>To'lov qilish havolasi</div>
@@ -40,7 +40,7 @@
           1. Quyidagi to'lov turlaridan biri orqali to`lovni amalga oshiring:
         </p>
         <a
-          href="https://my.click.uz/services/pay?service_id=38620&merchant_id=25262"
+          href="https://my.click.uz/services/pay?service_id=38620&merchant_id=25262&amount=1000.00&transaction_param=7772"
           target="_blank"
           class="pay-click"
         >
@@ -78,7 +78,13 @@
           </div>
 
           <!-- Fayl yuklash -->
-          <input class="form-file" type="file" name="file" required />
+          <input
+            class="form-file"
+            type="file"
+            id="fileInput"
+            name="file"
+            required
+          />
 
           <!-- Yashirin ma'lumotlar -->
           <input type="hidden" name="formid" value="1093830376" />
@@ -95,7 +101,7 @@
           <div>Yordam kerakmi?</div>
           <div>Yordamchimiz bilan bog'laning</div>
         </div>
-        <a href="https://t.me/aipplyacademy" class="help-btn" target="_blank">
+        <a href="tel:+998771233300" class="help-btn" target="_blank">
           <img class="help-img" src="./assets/telegram.png" alt="" />
           <span>Yordamchi bilan bog'lanish</span>
         </a>

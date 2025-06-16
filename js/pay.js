@@ -1,9 +1,26 @@
+const prices = {
+  standart: "590,000",
+  premium: "790,000",
+  viponline: "1,390,000",
+  vipoffline: "1,390,000",
+};
+
+const types = {
+  standart: "Standart",
+  premium: "Premium",
+  viponline: "VIP online",
+  vipoffline: "VIP offline",
+};
+
 const params = new URLSearchParams(window.location.search);
 document.getElementById("name").textContent = params.get("name") || "Noma'lum";
 document.getElementById("phone").textContent =
   params.get("phone") || "Noma'lum";
 document.getElementById("type").textContent =
-  params.get("type").toUpperCase() || "Noma'lum";
+  types[params.get("type")] || "Noma'lum";
+
+document.getElementById("price").textContent =
+  prices[params.get("type")] + " so'm" || "Noma'lum";
 
 function startCountdown(durationInSeconds, displayElement) {
   let timer = durationInSeconds;
@@ -27,34 +44,8 @@ function startCountdown(durationInSeconds, displayElement) {
   }, 1000);
 }
 
-// Sahifa yuklanganda timer boshlansin
 window.onload = function () {
   const display = document.getElementById("timer");
-  const countdownSeconds = 15 * 60; // 15 minut = 900 sekund
+  const countdownSeconds = 15 * 60;
   startCountdown(countdownSeconds, display);
 };
-
-function submitForm(e) {
-  e.preventDefault();
-  const form = e.target;
-  const formData = new FormData(form);
-
-  fetch("https://forms.tildacdn.com/proccess/", {
-    method: "POST",
-    body: formData,
-  })
-    .then((res) => {
-      if (res.ok) {
-        alert("Ma'lumot muvaffaqiyatli yuborildi!");
-        form.reset();
-      } else {
-        alert("Xatolik yuz berdi.");
-      }
-    })
-    .catch((err) => {
-      console.error("Tarmoq xatosi:", err);
-      alert("Tarmoqda muammo yuz berdi.");
-    });
-
-  return false;
-}
