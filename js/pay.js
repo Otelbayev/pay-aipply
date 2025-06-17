@@ -49,3 +49,11 @@ window.onload = function () {
   const countdownSeconds = 15 * 60;
   startCountdown(countdownSeconds, display);
 };
+
+const form = document.getElementById("lastform");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  window.location.href = "thankyou.html?" + params.toString();
+});
